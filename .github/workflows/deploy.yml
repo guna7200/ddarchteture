@@ -31,4 +31,14 @@ jobs:
           FTP_PASS: ${{ secrets.FTP_PASSWORD }}
         run: |
           sudo apt-get update && sudo apt-get install -y lftp
-          lftp -c "set ftp:passive-mode true; set ftp:ssl-allow false; set net:max-retries 3; set net:timeout 15; open -u \"$FTP_USER\",\"$FTP_PASS\" \"$FTP_SERVER\"; mirror --reverse --parallel=1 --verbose ./dist/ ./; quit"
+          cat <<EOF > lftp_deploy.cmd
+          set ftp:ssl-allow false
+          set ftp:passive-mode true
+          set net:max-retries 5
+          set net:timeout 30
+          open $FTP_SERVER
+          user "$FTP_USER" "$FTP_PASS"
+          mirror --reverse --verbose ./dist/ ./
+          quit
+          EOF
+          lftp -f lftp_deploy.cmd
