@@ -10,7 +10,7 @@ const servicesList = [
         title: "Architecture",
         tagline: "Concept to Realization",
         desc: "Crafting meaningful built environments and high-end commercial/residential landmarks. We blend cutting-edge technology with spatial poetry to develop structural legacies.",
-        image: "/images/image43.jpeg",
+        image: "/images/landing_architecture.png",
         scopes: ["Conceptual Architectural Design", "Vastu-Compliant Master Planning", "3D Renderings & Walkthroughs", "Structural Engineering Coordination"]
     },
     {
@@ -18,7 +18,7 @@ const servicesList = [
         title: "Interior Design",
         tagline: "Legacy Spaces",
         desc: "Meticulous, detail-oriented luxury interior layouts that reflect classic majesty and modern convenience. We prioritize premium materials and ergonomic flows.",
-        image: "/images/image45.jpeg",
+        image: "/images/landing_interior.jpg",
         scopes: ["Residential & Commercial Interiors", "Custom Bespoke Furniture Design", "Material & Color Consultation", "Lighting & Acoustic Planning"]
     },
     {
@@ -26,7 +26,7 @@ const servicesList = [
         title: "Landscape Design",
         tagline: "Environmental Harmony",
         desc: "Transforming vast expanses of outdoor land into lush, cohesive visual escapes. We integrate natural topography with thematic pathways, pools, and custom flora.",
-        image: "/images/image47.png",
+        image: "/images/landing_landscape.jpg",
         scopes: ["Thematic Resort Landscape Layouts", "Waterbody & Pool Master Planning", "Site Topography & Drainage Grids", "Hardscape & Botanical Selection"]
     },
     {
@@ -34,7 +34,7 @@ const servicesList = [
         title: "Project Management",
         tagline: "End-to-End Execution",
         desc: "Delivering world-class Project Management Consultancy (PMC) for multi-million budget landmarks. We coordinate contractors and assure strict quality compliance.",
-        image: "/images/image48.png",
+        image: "/images/landing_pmc.jpg",
         scopes: ["Feasibility & Budget Optimization", "Project Timeline & Scheduling", "Contractor & Vendor Coordination", "Site Quality Assurance & Audits"]
     }
 ];
