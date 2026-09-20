@@ -27,8 +27,8 @@ const VisionMission = () => {
                             className="col-span-12 h-64 overflow-hidden rounded-lg shadow-lg relative"
                         >
                             <img
-                                src="/images/image66.png"
-                                alt="Modern Architectural View"
+                                src="/images/about_vision.jpg"
+                                alt="Our Vision - Landscaping & Aquascape"
                                 className="w-full h-full object-cover"
                             />
                         </motion.div>
@@ -39,8 +39,8 @@ const VisionMission = () => {
                             className="col-span-5 h-48 overflow-hidden rounded-lg shadow-lg relative"
                         >
                             <img
-                                src="/images/image66.png"
-                                alt="Glass Facade Detail"
+                                src="/images/about_mission.jpg"
+                                alt="Our Mission - Architecture"
                                 className="w-full h-full object-cover"
                             />
                         </motion.div>
@@ -51,8 +51,8 @@ const VisionMission = () => {
                             className="col-span-3 h-48 overflow-hidden rounded-lg shadow-lg relative"
                         >
                             <img
-                                src="/images/image66.png"
-                                alt="Entrance Wood Panel Detail"
+                                src="/images/image45.jpeg"
+                                alt="Interior Living Concept"
                                 className="w-full h-full object-cover"
                             />
                         </motion.div>
@@ -63,8 +63,8 @@ const VisionMission = () => {
                             className="col-span-4 h-48 overflow-hidden rounded-lg shadow-lg relative"
                         >
                             <img
-                                src="/images/image66.png"
-                                alt="Office Building Entryway"
+                                src="/images/image65.png"
+                                alt="Modern Architectural Facade"
                                 className="w-full h-full object-cover"
                             />
                         </motion.div>
