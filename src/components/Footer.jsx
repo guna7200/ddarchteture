@@ -28,9 +28,9 @@ const Footer = () => {
         <footer className="relative bg-[#060606] text-white overflow-hidden">
 
             {/* ── Big CTA section ── */}
-            <div className="border-b border-gray-200 py-28 px-8 md:px-16 lg:px-24 relative">
+            <div className="border-b border-gray-200 py-16 sm:py-28 px-5 sm:px-8 md:px-16 lg:px-24 relative">
                 {/* Gold glow orb */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-royal-gold/6 blur-3xl pointer-events-none rounded-full" />
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[300px] sm:w-[500px] h-[150px] sm:h-[200px] bg-royal-gold/6 blur-3xl pointer-events-none rounded-full" />
 
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
@@ -39,20 +39,20 @@ const Footer = () => {
                     transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                     className="max-w-5xl mx-auto flex flex-col items-center text-center"
                 >
-                    <div className="flex items-center gap-4 mb-8">
+                    <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
                         <span className="section-line" />
-                        <span className="text-royal-gold uppercase tracking-[0.4em] text-sm font-medium">Start a Project</span>
+                        <span className="text-royal-gold uppercase tracking-[0.3em] sm:tracking-[0.4em] text-xs sm:text-sm font-medium">Start a Project</span>
                         <span className="section-line" />
                     </div>
 
-                    <h2 className="text-5xl sm:text-7xl md:text-8xl font-serif font-bold text-white leading-none mb-12 tracking-tight">
+                    <h2 className="text-4xl sm:text-7xl md:text-8xl font-serif font-bold text-white leading-none mb-8 sm:mb-12 tracking-tight">
                         Let's<br />
                         <span className="text-gradient-gold">Talk.</span>
                     </h2>
 
                     <Link
                         to="/contact"
-                        className="group inline-flex items-center gap-4 px-10 py-5 border border-gray-300 text-white uppercase tracking-widest text-sm font-medium hover:border-royal-gold hover:text-royal-gold transition-all duration-500"
+                        className="group inline-flex items-center gap-3 sm:gap-4 px-8 sm:px-10 py-4 sm:py-5 border border-gray-300 text-white uppercase tracking-widest text-xs sm:text-sm font-medium hover:border-royal-gold hover:text-royal-gold transition-all duration-500 rounded sm:rounded-none"
                     >
                         Get in Touch
                         <ArrowUpRight
@@ -64,13 +64,13 @@ const Footer = () => {
             </div>
 
             {/* ── Footer links grid ── */}
-            <div className="px-8 md:px-16 lg:px-24 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-gray-200">
+            <div className="px-5 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 border-b border-gray-200">
                 {/* Brand */}
                 <div>
-                    <div className="bg-white p-2.5 rounded-xl shadow-md inline-block mb-6 border border-gray-100">
-                        <img src={siteLogo} alt="DD+ Architects Logo" className="h-20 md:h-24 w-auto object-contain" />
+                    <div className="bg-white p-2.5 rounded-xl shadow-md inline-block mb-4 sm:mb-6 border border-gray-100">
+                        <img src={siteLogo} alt="DD+ Architects Logo" className="h-16 sm:h-20 md:h-24 w-auto object-contain" />
                     </div>
-                    <p className="text-white text-sm leading-relaxed font-light max-w-xs">
+                    <p className="text-white text-xs sm:text-sm leading-relaxed font-light max-w-xs">
                         Born from Vision. Built with Passion. Designed for Legacy.
                     </p>
                 </div>

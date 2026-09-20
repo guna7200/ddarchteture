@@ -36,7 +36,7 @@ const Hero = () => {
         <section
             id="home"
             ref={containerRef}
-            className="relative h-screen w-full overflow-hidden bg-gray-900 flex flex-col"
+            className="relative min-h-screen w-full overflow-hidden bg-gray-900 flex flex-col justify-between"
         >
             {/* ── Background Image — bright, minimal overlay ── */}
             <div className="absolute inset-0 z-0 overflow-hidden">
@@ -46,34 +46,25 @@ const Hero = () => {
                     className="w-full h-full object-cover"
                 />
                 {/* Very light overlay only at bottom for text legibility */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
             </div>
 
-            {/* ── Top bar ticker ── */}
-            <motion.div
-                className="relative z-10 border-b border-white/10 py-3"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2, duration: 1 }}
-            >
-            </motion.div>
-
             {/* ── Main content ── */}
-            <div className="relative z-10 flex-1 flex flex-col justify-center px-8 md:px-16 lg:px-24 pt-28 md:pt-36 pb-8">
+            <div className="relative z-10 flex-1 flex flex-col justify-center px-5 sm:px-8 md:px-16 lg:px-24 pt-24 sm:pt-28 md:pt-36 pb-6 sm:pb-8">
                 {/* Eyebrow label */}
                 <motion.div
                     variants={fadeUp(0.3)}
                     initial="hidden"
                     animate="visible"
-                    className="flex items-center gap-4 mb-8"
+                    className="flex items-center gap-4 mb-4 sm:mb-8"
                 >
                     <span className="w-8 h-px bg-[#C8A97E] inline-block" />
                 </motion.div>
 
                 {/* Oversized headline — word by word */}
                 <div className="overflow-hidden">
-                    <div className="flex flex-wrap gap-x-5 gap-y-0 mb-10">
+                    <div className="flex flex-wrap gap-x-3 sm:gap-x-5 gap-y-0 mb-6 sm:mb-10">
                         {HEADLINE_WORDS.map((word, i) => (
                             <div key={i} className="overflow-hidden py-1">
                                 <motion.span
@@ -81,7 +72,7 @@ const Hero = () => {
                                     variants={wordVariants}
                                     initial="hidden"
                                     animate="visible"
-                                    className="inline-block text-5xl mt-5 sm:text-7xl md:text-8xl lg:text-[6rem] font-serif font-bold text-white leading-none tracking-tight drop-shadow-2xl"
+                                    className="inline-block text-4xl sm:text-7xl md:text-8xl lg:text-[6rem] font-serif font-bold text-white leading-none tracking-tight drop-shadow-2xl"
                                 >
                                     {word}
                                 </motion.span>
@@ -95,10 +86,10 @@ const Hero = () => {
                     variants={fadeUp(1.2)}
                     initial="hidden"
                     animate="visible"
-                    className="text-white text-xl md:text-2xl max-w-4xl leading-relaxed font-bold mb-12 drop-shadow-xl"
+                    className="text-white text-base sm:text-xl md:text-2xl max-w-4xl leading-relaxed font-bold mb-8 sm:mb-12 drop-shadow-xl"
                 >
                     Architecture | Interior Design | Landscape | PMC<br />
-                    <span className="text-white font-semibold text-xl md:text-2xl lg:text-3xl tracking-wide drop-shadow-md">Led by Ar. Deepu D Lakshmi (Principal Architect / Founder)</span>
+                    <span className="text-white font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl tracking-wide drop-shadow-md">Led by Ar. Deepu D Lakshmi (Principal Architect / Founder)</span>
                 </motion.p>
 
                 {/* CTAs */}
@@ -106,11 +97,11 @@ const Hero = () => {
                     variants={fadeUp(1.4)}
                     initial="hidden"
                     animate="visible"
-                    className="flex flex-wrap gap-6 items-center"
+                    className="flex flex-wrap gap-3 sm:gap-6 items-center"
                 >
                     <Link
                         to="/gallery"
-                        className="group flex items-center gap-3 px-8 py-4 bg-[#C8A97E] text-white font-semibold uppercase tracking-widest text-sm hover:bg-white hover:text-[#C8A97E] transition-all duration-300"
+                        className="group flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 bg-[#C8A97E] text-white font-semibold uppercase tracking-widest text-xs sm:text-sm hover:bg-white hover:text-[#C8A97E] transition-all duration-300 rounded sm:rounded-none text-center"
                     >
                         Discover Work
                         <ArrowDownRight
@@ -120,7 +111,7 @@ const Hero = () => {
                     </Link>
                     <Link
                         to="/contact"
-                        className="group flex items-center gap-3 px-8 py-4 border border-white/60 text-white font-semibold uppercase tracking-widest text-sm hover:border-[#C8A97E] hover:text-[#C8A97E] transition-all duration-300"
+                        className="group flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 border border-white/60 text-white font-semibold uppercase tracking-widest text-xs sm:text-sm hover:border-[#C8A97E] hover:text-[#C8A97E] transition-all duration-300 rounded sm:rounded-none text-center"
                     >
                         Get in Touch
                         <ArrowDownRight
@@ -133,7 +124,7 @@ const Hero = () => {
 
             {/* ── Scroll indicator ── */}
             <motion.div
-                className="relative z-10 flex items-center gap-3 px-8 md:px-16 lg:px-24 pb-6"
+                className="relative z-10 hidden sm:flex items-center gap-3 px-5 sm:px-8 md:px-16 lg:px-24 pb-6"
                 variants={fadeUp(1.8)}
                 initial="hidden"
                 animate="visible"

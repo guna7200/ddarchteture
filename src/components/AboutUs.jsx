@@ -37,24 +37,24 @@ const AboutUs = () => {
 
                         {/* White Card */}
                         <motion.div
-                            className="bg-white p-12 md:p-16 relative z-10 shadow-2xl"
+                            className="bg-white p-6 sm:p-12 md:p-16 relative z-10 shadow-2xl rounded-2xl lg:rounded-none"
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                         >
-                            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight font-serif">
-                                A Legacy of <br />
+                            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight font-serif">
+                                A Legacy of <br className="hidden sm:inline" />
                                 Design Excellence
                             </h3>
-                            <p className="text-gray-900 leading-relaxed mb-6 font-normal text-base">
+                            <p className="text-gray-900 leading-relaxed mb-6 font-normal text-sm sm:text-base">
                                 Archi Dee SiGns is a multidisciplinary architecture, landscape, and planning practice committed to creating innovative, sustainable, and transformative environments. Backed by a multidisciplinary team of 57+ professionals under the leadership of Ar. Deepu D Lakshmi, we offer comprehensive design solutions since 2014.
                             </p>
-                            <p className="text-gray-900 leading-relaxed mb-10 font-normal text-base">
+                            <p className="text-gray-900 leading-relaxed mb-8 sm:mb-10 font-normal text-sm sm:text-base">
                                 Our philosophy integrates creativity, technical expertise, and strategic thinking to deliver spaces that are aesthetically distinctive, environmentally responsible, and economically sustainable.
                             </p>
                             <Link
                                 to="/about"
-                                className="inline-block px-10 py-4 bg-[#C8A97E] text-white font-semibold uppercase tracking-wider text-sm hover:bg-gray-900 transition-all duration-300"
+                                className="inline-block px-8 sm:px-10 py-3.5 sm:py-4 bg-[#C8A97E] text-white font-semibold uppercase tracking-wider text-xs sm:text-sm hover:bg-gray-900 transition-all duration-300 rounded sm:rounded-none"
                             >
                                 Learn More
                             </Link>
@@ -64,7 +64,7 @@ const AboutUs = () => {
                     {/* Right Side - Image & Features */}
                     <div className="lg:w-1/2 flex flex-col justify-between">
                         <motion.div
-                            className="h-[400px] lg:h-[500px] w-full mb-12"
+                            className="h-[280px] sm:h-[400px] lg:h-[500px] w-full mb-8 sm:mb-12"
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -72,7 +72,7 @@ const AboutUs = () => {
                             <img
                                 src="/images/image3.png"
                                 alt="Modern Architecture - Morais City"
-                                className="w-full h-full object-cover  transition-all duration-700 rounded-lg shadow-lg"
+                                className="w-full h-full object-cover transition-all duration-700 rounded-lg shadow-lg"
                             />
                         </motion.div>
 

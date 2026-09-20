@@ -20,11 +20,11 @@ const VisionMission = () => {
                 <div className="flex flex-col lg:flex-row gap-16 items-stretch">
                     
                     {/* Left Column: Parallax Images Grid (Slide 3 styling) */}
-                    <div className="lg:w-1/2 grid grid-cols-12 gap-4 min-h-[500px]">
+                    <div className="lg:w-1/2 grid grid-cols-12 gap-3 sm:gap-4 min-h-[350px] sm:min-h-[500px]">
                         {/* Top Large Image */}
                         <motion.div 
                             style={{ y: y1 }}
-                            className="col-span-12 h-64 overflow-hidden rounded-lg shadow-lg relative"
+                            className="col-span-12 h-48 sm:h-64 overflow-hidden rounded-lg shadow-lg relative"
                         >
                             <img
                                 src="/images/about_vision.jpg"
@@ -36,7 +36,7 @@ const VisionMission = () => {
                         {/* Bottom Left Small Image */}
                         <motion.div 
                             style={{ y: y2 }}
-                            className="col-span-5 h-48 overflow-hidden rounded-lg shadow-lg relative"
+                            className="col-span-4 h-32 sm:h-48 overflow-hidden rounded-lg shadow-lg relative"
                         >
                             <img
                                 src="/images/about_mission.jpg"
@@ -48,7 +48,7 @@ const VisionMission = () => {
                         {/* Bottom Center Wood Entry Image */}
                         <motion.div 
                             style={{ y: y3 }}
-                            className="col-span-3 h-48 overflow-hidden rounded-lg shadow-lg relative"
+                            className="col-span-4 h-32 sm:h-48 overflow-hidden rounded-lg shadow-lg relative"
                         >
                             <img
                                 src="/images/image45.jpeg"
@@ -60,7 +60,7 @@ const VisionMission = () => {
                         {/* Bottom Right Wide Perspective Image */}
                         <motion.div 
                             style={{ y: y4 }}
-                            className="col-span-4 h-48 overflow-hidden rounded-lg shadow-lg relative"
+                            className="col-span-4 h-32 sm:h-48 overflow-hidden rounded-lg shadow-lg relative"
                         >
                             <img
                                 src="/images/image65.png"

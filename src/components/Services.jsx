@@ -95,28 +95,28 @@ const Services = () => {
                                     key={index}
                                     onClick={() => setActiveIndex(index)}
                                     onMouseEnter={() => setActiveIndex(index)}
-                                    className={`w-full text-left p-6 md:p-8 rounded-xl border transition-all duration-500 flex items-center justify-between group ${
+                                    className={`w-full text-left p-4 sm:p-6 md:p-8 rounded-xl border transition-all duration-500 flex items-center justify-between group ${
                                         isActive 
-                                            ? 'bg-white border-[#C8A97E] shadow-xl translate-x-2' 
+                                            ? 'bg-white border-[#C8A97E] shadow-xl sm:translate-x-2' 
                                             : 'bg-transparent border-gray-100 hover:border-gray-300'
                                     }`}
                                 >
-                                    <div className="flex items-center gap-6">
-                                        <span className={`text-sm font-sans tracking-wider font-bold transition-colors duration-300 ${
+                                    <div className="flex items-center gap-4 sm:gap-6">
+                                        <span className={`text-xs sm:text-sm font-sans tracking-wider font-bold transition-colors duration-300 ${
                                             isActive ? 'text-[#C8A97E]' : 'text-gray-400'
                                         }`}>
                                             {service.number}
                                         </span>
-                                        <h3 className={`text-lg md:text-xl font-serif font-bold transition-colors duration-300 ${
+                                        <h3 className={`text-base sm:text-lg md:text-xl font-serif font-bold transition-colors duration-300 ${
                                             isActive ? 'text-gray-900' : 'text-gray-600'
                                         }`}>
                                             {service.title}
                                         </h3>
                                     </div>
-                                    <div className={`p-2 rounded-full transition-all duration-300 ${
+                                    <div className={`p-1.5 sm:p-2 rounded-full transition-all duration-300 shrink-0 ${
                                         isActive ? 'bg-[#C8A97E] text-white' : 'bg-gray-50 text-gray-400 group-hover:translate-x-1 group-hover:text-gray-600'
                                     }`}>
-                                        <ArrowRight size={18} />
+                                        <ArrowRight size={16} />
                                     </div>
                                 </button>
                             );
@@ -135,7 +135,7 @@ const Services = () => {
                                 className="w-full flex flex-col bg-white rounded-2xl border border-gray-100 shadow-2xl overflow-hidden"
                             >
                                 {/* Showcase Image Container */}
-                                <div className="h-64 md:h-80 overflow-hidden relative">
+                                <div className="h-48 sm:h-64 md:h-80 overflow-hidden relative">
                                     <img
                                         src={servicesData[activeIndex].image}
                                         alt={servicesData[activeIndex].title}
