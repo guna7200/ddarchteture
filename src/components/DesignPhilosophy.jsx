@@ -62,9 +62,9 @@ const DesignPhilosophy = () => {
                             className="w-full h-72 overflow-hidden rounded-lg shadow-md"
                         >
                             <img
-                                src="/images/image46.jpeg"
+                                src="/images/image45.jpeg"
                                 alt="Modern Architecture curved layout"
-                                className="w-full h-full object-cover  transition-all duration-700"
+                                className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
                             />
                         </motion.div>
 
@@ -79,7 +79,7 @@ const DesignPhilosophy = () => {
                                 <img
                                     src="/images/image46.jpeg"
                                     alt="Modern Landscape Pathway"
-                                    className="w-full h-full object-cover  transition-all duration-700"
+                                    className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
                                 />
                             </motion.div>
 
@@ -91,9 +91,9 @@ const DesignPhilosophy = () => {
                                 className="h-64 overflow-hidden rounded-lg shadow-md"
                             >
                                 <img
-                                    src="/images/image46.jpeg"
+                                    src="/images/image47.png"
                                     alt="Warm brick entryway"
-                                    className="w-full h-full object-cover  transition-all duration-700"
+                                    className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
                                 />
                             </motion.div>
                         </div>
