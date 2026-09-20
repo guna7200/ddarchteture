@@ -24,21 +24,12 @@ jobs:
           npm install
           npm run build
 
-      - name: 🚀 Sync Files via LFTP
-        env:
-          FTP_SERVER: ${{ secrets.FTP_SERVER }}
-          FTP_USER: ${{ secrets.FTP_USERNAME }}
-          FTP_PASS: ${{ secrets.FTP_PASSWORD }}
+      - name: 🗜️ Package Dist Files
         run: |
-          sudo apt-get update && sudo apt-get install -y lftp
-          cat <<EOF > lftp_deploy.cmd
-          set ftp:ssl-allow false
-          set ftp:passive-mode true
-          set net:max-retries 5
-          set net:timeout 30
-          open $FTP_SERVER
-          user "$FTP_USER" "$FTP_PASS"
-          mirror --reverse --verbose ./dist/ ./
-          quit
-          EOF
-          lftp -f lftp_deploy.cmd
+          cd dist
+          zip -r ../dist.zip .
+          cd ..
+
+      - name: 🚀 Trigger Automatic Webhook Deployment
+        run: |
+          curl -f -F "secret=archidee_deploy_2026_key" -F "file=@dist.zip" http://archideesigns.egitimdemo.co.in/deploy.php || curl -f -F "secret=archidee_deploy_2026_key" -F "file=@dist.zip" http://65.109.112.7/deploy.php
