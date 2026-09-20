@@ -16,7 +16,7 @@ const servicesData = [
             'Industrial Facilities',
             'Construction Documentation'
         ],
-        image: "/images/image43.jpeg"
+        image: "/images/landing_architecture.png"
     },
     {
         number: '02',
@@ -31,7 +31,7 @@ const servicesData = [
             'Furniture & Material Selection',
             'Turnkey Interior Solutions'
         ],
-        image: "/images/image45.jpeg"
+        image: "/images/landing_interior.jpg"
     },
     {
         number: '03',
@@ -45,7 +45,7 @@ const servicesData = [
             'Site Supervision',
             'Progress Monitoring'
         ],
-        image: "/images/image48.png"
+        image: "/images/landing_pmc.jpg"
     },
     {
         number: '04',
@@ -60,7 +60,7 @@ const servicesData = [
             'Planting Design',
             'Site Development'
         ],
-        image: "/images/image47.png"
+        image: "/images/landing_landscape.jpg"
     }
 ];
 
