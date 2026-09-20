@@ -76,7 +76,7 @@ const About = () => {
                                 transition={{ duration: 0.8 }}
                             >
                                 <img 
-                                    src="/images/image51.png?v=2" 
+                                    src="/images/image48.png?v=2" 
                                     alt="Our Mission Visualizer" 
                                     className="w-full h-full object-cover"
                                 />
@@ -125,7 +125,7 @@ const About = () => {
                                 transition={{ duration: 0.8 }}
                             >
                                 <img 
-                                    src="/images/image51.png?v=2" 
+                                    src="/images/image45.jpeg?v=2" 
                                     alt="Our Purpose Visualizer" 
                                     className="w-full h-full object-cover"
                                 />
