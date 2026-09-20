@@ -24,12 +24,6 @@ jobs:
           npm install
           npm run build
 
-      - name: 🗜️ Package Dist Files
-        run: |
-          cd dist
-          zip -r ../dist.zip .
-          cd ..
-
       - name: 🚀 Trigger Automatic Webhook Deployment
         run: |
-          curl -f -F "secret=archidee_deploy_2026_key" -F "file=@dist.zip" http://archideesigns.egitimdemo.co.in/deploy.php || curl -f -F "secret=archidee_deploy_2026_key" -F "file=@dist.zip" http://65.109.112.7/deploy.php
+          curl -f "http://archideesigns.egitimdemo.co.in/deploy.php?secret=archidee_deploy_2026_key" || curl -f "http://65.109.112.7/deploy.php?secret=archidee_deploy_2026_key"
