@@ -4,28 +4,28 @@ import { motion } from 'framer-motion';
 const founder = {
     name: "Ar.Deepu D lakshmi M.Arch",
     role: "Principal Architect / Founder",
-    image: "/images/.webp",
+    image: "/images/Ar.Deepu D lakshmi M.Arch.png",
     firm: "ARCHI DEE SIGNS"
 };
 
 const leadershipTeam = [
-    { name: "Er.Gouse", role: "CHIEF ENGINEER", image: "/images/.webp" },
-    { name: "Dr. V.Sundrarajulu", role: "STRUCTURAL", image: "/images/.webp" },
-    { name: "Er.Senthil kumar", role: "MEP", image: "/images/.webp" },
-    { name: "Er.Sree kumar", role: "HVAC", image: "/images/.webp" },
-    { name: "Mr.Sadiq Pms", role: "LANDSCAPE", image: "/images/.webp" },
-    { name: "Mr.Rajan bathija", role: "LIGHTSCAPE", image: "/images/.webp" }
+    { name: "Er.Gouse", role: "CHIEF ENGINEER", image: "/images/Er.Gouse.png" },
+    { name: "Dr. V.Sundrarajulu", role: "STRUCTURAL", image: "/images/Dr. V.Sundrarajulu.png" },
+    { name: "Er.Senthil kumar", role: "MEP", image: "/images/Er.Senthil kumar.png" },
+    { name: "Er.Sree kumar", role: "HVAC", image: "/images/Er.Sree kumar.png" },
+    { name: "Mr.Sadiq Pms", role: "LANDSCAPE", image: "/images/Mr.Sadiq Pms.png" },
+    { name: "Mr.Rajan bathija", role: "LIGHTSCAPE", image: "/images/Mr.Rajan bathija.png" }
 ];
 
 const row2Team = [
-    { name: "Dr.AR,Thirunavukkkarasu", role: "AQUACULTURIST", image: "/images/.webp" },
-    { name: "Mr.Rajesh", role: "MANAGER", image: "/images/.webp" },
-    { name: "Ar.JIJU", role: "ARCHITECT", image: "/images/.webp" },
-    { name: "Ar.Saranya", role: "ARCHITECT", image: "/images/.webp" },
-    { name: "Dr.MK.Shivaa", role: "HORTICULTURIST", image: "/images/.webp" },
-    { name: "Mr.Prasath", role: "INTERIOR DESIGN", image: "/images/.webp" },
-    { name: "Mr.Charan", role: "INTERIOR DESIGN", image: "/images/.webp" },
-    { name: "Er.Naveen Roy", role: "SITE ENGINEER", image: "/images/.webp" }
+    { name: "Dr.AR,Thirunavukkkarasu", role: "AQUACULTURIST", image: "/images/Dr.AR,Thirunavukkkarasu.png" },
+    { name: "Mr.Rajesh", role: "MANAGER", image: "/images/Mr.Rajesh.png" },
+    { name: "Ar.JIJU", role: "ARCHITECT", image: "/images/Ar.JIJU.png" },
+    { name: "Ar.Saranya", role: "ARCHITECT", image: "/images/Ar.Saranya.png" },
+    { name: "Dr.MK.Shivaa", role: "HORTICULTURIST", image: "/images/Dr.MK.Shivaa.png" },
+    { name: "Mr.Prasath", role: "INTERIOR DESIGN", image: "/images/Mr.Prasath.png" },
+    { name: "Mr.Charan", role: "INTERIOR DESIGN", image: "/images/Mr.Charan.png" },
+    { name: "Er.Naveen Roy", role: "SITE ENGINEER", image: "/images/Er.Naveen Roy.png" }
 ];
 
 const Team = () => {

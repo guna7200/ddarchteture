@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { MapPin, Mail, Phone, Instagram, Facebook, Twitter, Youtube, ArrowUpRight, ChevronUp } from 'lucide-react';
 import Marquee from './Marquee';
 
-const siteLogo = '/images/.webp?v=2';
+const siteLogo = '/images/site_logo.png';
 
 const Footer = () => {
     const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });

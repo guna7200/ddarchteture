@@ -110,7 +110,7 @@ const PrestigiousProjectsList = () => {
                             className="rounded-2xl overflow-hidden shadow-2xl bg-white border border-gray-100 p-4"
                         >
                             <img
-                                src="/images/.webp?v=2"
+                                src="/images/image8.png"
                                 alt="Integrated Township Master Plan Layout"
                                 className="w-full h-auto object-cover rounded-xl"
                             />

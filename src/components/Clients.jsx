@@ -3,26 +3,26 @@ import { motion } from 'framer-motion';
 
 // Client logos from public/images
 const clientLogos = [
-    { name: 'Morais Group', src: '/images/.webp' },
-    { name: 'HICET', src: '/images/.webp' },
-    { name: 'Ideal Resorts', src: '/images/.webp' },
-    { name: 'Coral Beach', src: '/images/.webp' },
-    { name: 'Vijaya Dhayaa', src: '/images/.webp' },
-    { name: 'Divine Blessings', src: '/images/.webp' },
-    { name: 'DSCET', src: '/images/.webp' },
-    { name: 'Mangal & Mangal', src: '/images/.webp' },
-    { name: 'LuLu Mall', src: '/images/.webp' },
-    { name: 'Aasa Holding', src: '/images/.webp' },
-    { name: 'Eppinger', src: '/images/.webp' },
-    { name: 'Sigaram Holdings', src: '/images/.webp' },
-    { name: 'KPR Mill', src: '/images/.webp' },
-    { name: 'CS Grand', src: '/images/.webp' },
-    { name: 'Chitra Dynasty', src: '/images/.webp' },
-    { name: 'Magizhvanam', src: '/images/.webp' },
-    { name: 'Pothys', src: '/images/.webp' },
-    { name: 'RC Constructions', src: '/images/.webp' },
-    { name: 'Chennai Silks', src: '/images/.webp' },
-    { name: 'Adityaram Group', src: '/images/.webp' }
+    { name: 'Morais Group', src: '/images/image12.jpeg' },
+    { name: 'HICET', src: '/images/image13.jpeg' },
+    { name: 'Ideal Resorts', src: '/images/image14.jpeg' },
+    { name: 'Coral Beach', src: '/images/image15.png' },
+    { name: 'Vijaya Dhayaa', src: '/images/image16.png' },
+    { name: 'Divine Blessings', src: '/images/image17.png' },
+    { name: 'DSCET', src: '/images/image18.jpeg' },
+    { name: 'Mangal & Mangal', src: '/images/image19.png' },
+    { name: 'LuLu Mall', src: '/images/image20.jpeg' },
+    { name: 'Aasa Holding', src: '/images/image21.png' },
+    { name: 'Eppinger', src: '/images/image22.png' },
+    { name: 'Sigaram Holdings', src: '/images/image23.png' },
+    { name: 'KPR Mill', src: '/images/image24.jpeg' },
+    { name: 'CS Grand', src: '/images/image25.jpeg' },
+    { name: 'Chitra Dynasty', src: '/images/image26.png' },
+    { name: 'Magizhvanam', src: '/images/image27.png' },
+    { name: 'Pothys', src: '/images/image28.png' },
+    { name: 'RC Constructions', src: '/images/image30.jpeg' },
+    { name: 'Chennai Silks', src: '/images/image31.png' },
+    { name: 'Adityaram Group', src: '/images/image32.png' }
 ];
 
 // Duplicate logos array to make a seamless infinite loop

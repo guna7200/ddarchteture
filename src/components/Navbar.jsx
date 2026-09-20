@@ -3,7 +3,7 @@ import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 
-const siteLogo = '/images/.webp?v=2';
+const siteLogo = '/images/site_logo.png';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);

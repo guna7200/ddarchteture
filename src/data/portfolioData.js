@@ -9,8 +9,8 @@ export const portfolioItems = [
         date: '2023',
         categories: ['Commercial', 'Architecture'],
         tags: ['Business Park', 'Trichy', 'Modern'],
-        image: '/images/.webp',
-        gallery: ['/images/.webp', '/images/.webp'],
+        image: '/images/image42.jpeg',
+        gallery: ['/images/image43.jpeg', '/images/image44.png'],
         description: 'A landmark 1 million sqft commercial business park in Trichy — a dynamic statement of modern corporate excellence.'
     },
     {
@@ -22,8 +22,8 @@ export const portfolioItems = [
         date: '2023',
         categories: ['Hospitality', 'Resort'],
         tags: ['Chennai', 'Wellness', 'Resort'],
-        image: '/images/.webp',
-        gallery: ['/images/.webp', '/images/.webp'],
+        image: '/images/image45.jpeg',
+        gallery: ['/images/image46.jpeg', '/images/image47.png'],
         description: 'A wellness resort spanning Chennai & Dharmapuri — a 60 Cr project merging nature, hospitality and modern design.'
     },
     {
@@ -35,8 +35,8 @@ export const portfolioItems = [
         date: '2024',
         categories: ['Residential', 'Luxury'],
         tags: ['ECR Chennai', 'Palace', 'Luxury'],
-        image: '/images/.webp',
-        gallery: ['/images/.webp', '/images/.webp'],
+        image: '/images/image48.png',
+        gallery: ['/images/image49.jpeg', '/images/image50.jpeg'],
         description: '68,000 sqft palace with 3.5 acres of landscape on ECR Chennai — epitomizing opulence and spatial grandeur.'
     },
     {
@@ -48,8 +48,8 @@ export const portfolioItems = [
         date: '2024',
         categories: ['Cultural', 'Institutional'],
         tags: ['Shirdi', 'Temple', '350 Cr'],
-        image: '/images/.webp',
-        gallery: ['/images/.webp', '/images/.webp'],
+        image: '/images/image51.png',
+        gallery: ['/images/image52.jpeg', '/images/image53.jpeg'],
         description: 'A sacred 350 Cr project — the 10-acre India largest Oceanarium and spiritual complex at Shirdi.'
     },
     {
@@ -61,8 +61,8 @@ export const portfolioItems = [
         date: '2023',
         categories: ['Hospitality', 'Sports'],
         tags: ['Trichy', 'Sports Club', 'International'],
-        image: '/images/.webp',
-        gallery: ['/images/.webp', '/images/.webp'],
+        image: '/images/image54.png',
+        gallery: ['/images/image55.jpeg', '/images/image56.png'],
         description: 'International standard sports club with state-of-the-art facilities worth 100 Cr at Trichy.'
     },
     {
@@ -74,8 +74,8 @@ export const portfolioItems = [
         date: '2024',
         categories: ['Cultural', 'Landscape'],
         tags: ['Trichy', 'Theme Park', '200ft Statue'],
-        image: '/images/.webp',
-        gallery: ['/images/.webp', '/images/.webp'],
+        image: '/images/image57.jpeg',
+        gallery: ['/images/image58.png', '/images/image59.png'],
         description: "India's 2nd largest 200ft statute and 45-acre theme-based park at Trichy — a 100 Cr heritage landmark."
     },
     {
@@ -87,8 +87,8 @@ export const portfolioItems = [
         date: '2024',
         categories: ['Commercial', 'Urban Planning'],
         tags: ['Trichy', 'Township', '360 Acres'],
-        image: '/images/.webp',
-        gallery: ['/images/.webp', '/images/.webp'],
+        image: '/images/image60.jpeg',
+        gallery: ['/images/image61.png', '/images/image62.png'],
         description: '360-acre integrated township master plan at Trichy — a city within a city designed for the future.'
     },
     {
@@ -100,8 +100,8 @@ export const portfolioItems = [
         date: '2024',
         categories: ['Cultural', 'Architecture'],
         tags: ['Memorial', 'Legacy', 'Landmark'],
-        image: '/images/.webp',
-        gallery: ['/images/.webp', '/images/.webp'],
+        image: '/images/image63.png',
+        gallery: ['/images/image64.jpeg', '/images/image65.png'],
         description: 'A tribute to a visionary — an inspiring monument and exhibition centre honoring the legacy of Dr. APJ Abdul Kalam.'
     },
 ];

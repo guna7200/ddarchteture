@@ -27,7 +27,7 @@ const VisionMission = () => {
                             className="col-span-12 h-64 overflow-hidden rounded-lg shadow-lg relative"
                         >
                             <img
-                                src="/images/.webp"
+                                src="/images/image66.png"
                                 alt="Modern Architectural View"
                                 className="w-full h-full object-cover"
                             />
@@ -39,7 +39,7 @@ const VisionMission = () => {
                             className="col-span-5 h-48 overflow-hidden rounded-lg shadow-lg relative"
                         >
                             <img
-                                src="/images/.webp?v=2"
+                                src="/images/image66.png"
                                 alt="Glass Facade Detail"
                                 className="w-full h-full object-cover"
                             />
@@ -51,7 +51,7 @@ const VisionMission = () => {
                             className="col-span-3 h-48 overflow-hidden rounded-lg shadow-lg relative"
                         >
                             <img
-                                src="/images/.webp?v=2"
+                                src="/images/image66.png"
                                 alt="Entrance Wood Panel Detail"
                                 className="w-full h-full object-cover"
                             />
@@ -63,7 +63,7 @@ const VisionMission = () => {
                             className="col-span-4 h-48 overflow-hidden rounded-lg shadow-lg relative"
                         >
                             <img
-                                src="/images/.webp?v=2"
+                                src="/images/image66.png"
                                 alt="Office Building Entryway"
                                 className="w-full h-full object-cover"
                             />

@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
 
 const testimonialAvatars = [
-    '/images/.webp?v=2',
-    '/images/.webp',
-    '/images/.webp',
-    '/images/.webp',
-    '/images/.webp'
+    '/images/image10.png',
+    '/images/image10.png',
+    '/images/image10.png',
+    '/images/image10.png',
+    '/images/image10.png'
 ];
 
 const testimonials = [

@@ -41,7 +41,7 @@ const Hero = () => {
             {/* ── Background Image — bright, minimal overlay ── */}
             <div className="absolute inset-0 z-0 overflow-hidden">
                 <img
-                    src="/images/.webp?v=2"
+                    src="/images/image67.png"
                     alt="Archi Dee Signs Architecture"
                     className="w-full h-full object-cover"
                 />

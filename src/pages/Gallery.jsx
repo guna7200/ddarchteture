@@ -8,7 +8,7 @@ import { X } from 'lucide-react';
 // All images converted to WebP format (<200KB)
 const galleryImages = Array.from({ length: 36 }, (_, i) => {
     const num = i + 40; // Only numbers between 40 and 75
-    return `/images/image${num}.webp?v=3`;
+    const ext = [12,13,14,18,20,24,25,29,30,38,39,41,42,43,45,46,49,50,52,53,55,57,60,64,69,70].includes(num) ? "jpeg" : "png"; return `/images/image${num}.${ext}`;
 });
 
 const Gallery = () => {
@@ -16,7 +16,7 @@ const Gallery = () => {
 
     return (
         <PageTransition>
-            <PageHeader title="Gallery" image="/images/image1.webp?v=3" />
+            <PageHeader title="Gallery" image="/images/image1.png" />
             <section className="py-24 bg-gray-50">
                 <div className="container mx-auto px-6">
                     <motion.div

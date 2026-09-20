@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, X, Maximize2 } from 'lucide-react';
 
 const previewImages = [
-    { src: '/images/.webp', heightClass: 'h-80 md:h-[400px]' },
-    { src: '/images/.webp', heightClass: 'h-64 md:h-[300px]' },
-    { src: '/images/.webp', heightClass: 'h-96 md:h-[450px]' },
-    { src: '/images/.webp', heightClass: 'h-64 md:h-[320px]' },
-    { src: '/images/.webp', heightClass: 'h-80 md:h-[380px]' },
-    { src: '/images/.webp', heightClass: 'h-72 md:h-[340px]' }
+    { src: '/images/image12.jpeg', heightClass: 'h-80 md:h-[400px]' },
+    { src: '/images/image13.jpeg', heightClass: 'h-64 md:h-[300px]' },
+    { src: '/images/image14.jpeg', heightClass: 'h-96 md:h-[450px]' },
+    { src: '/images/image15.png', heightClass: 'h-64 md:h-[320px]' },
+    { src: '/images/image16.png', heightClass: 'h-80 md:h-[380px]' },
+    { src: '/images/image17.png', heightClass: 'h-72 md:h-[340px]' }
 ];
 
 const GallerySection = () => {

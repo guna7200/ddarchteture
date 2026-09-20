@@ -8,7 +8,7 @@ import { Eye, Target, Compass } from 'lucide-react';
 const About = () => {
     return (
         <PageTransition>
-            <PageHeader title="About Us" image="/images/.webp?v=2" />
+            <PageHeader title="About Us" image="/images/image5.png?v=2" />
 
             {/* -- Section 1: Vision, Mission & Purpose (Alternating Image & Content Layout) -- */}
             <section className="py-24 bg-white border-b border-gray-100 overflow-hidden">
@@ -38,7 +38,7 @@ const About = () => {
                                 transition={{ duration: 0.8 }}
                             >
                                 <img 
-                                    src="/images/.webp" 
+                                    src="/images/image51.png?v=2" 
                                     alt="Our Vision Visualizer" 
                                     className="w-full h-full object-cover"
                                 />
@@ -76,7 +76,7 @@ const About = () => {
                                 transition={{ duration: 0.8 }}
                             >
                                 <img 
-                                    src="/images/.webp" 
+                                    src="/images/image51.png?v=2" 
                                     alt="Our Mission Visualizer" 
                                     className="w-full h-full object-cover"
                                 />
@@ -125,7 +125,7 @@ const About = () => {
                                 transition={{ duration: 0.8 }}
                             >
                                 <img 
-                                    src="/images/.webp" 
+                                    src="/images/image51.png?v=2" 
                                     alt="Our Purpose Visualizer" 
                                     className="w-full h-full object-cover"
                                 />
@@ -162,8 +162,7 @@ const About = () => {
                 <div className="w-full px-8 md:px-16 lg:px-24 mx-auto">
                     <div className="rounded-3xl overflow-hidden shadow-2xl border border-gray-100 bg-white p-2">
                         <img 
-                            src="/images/.webp?v=2" 
-                            alt="Special Tribute Showcase - Dr. APJ Abdul Kalam Memorial" 
+                            src="/images/image74.png?v=2" alt="Special Tribute Showcase - Dr. APJ Abdul Kalam Memorial" 
                             className="w-full h-auto object-cover rounded-2xl"
                         />
                     </div>
@@ -187,8 +186,7 @@ const About = () => {
                         {/* Slide 13: Casa Grand Palace Layout */}
                         <div className="rounded-3xl overflow-hidden shadow-2xl border border-gray-100 bg-white p-2">
                             <img 
-                                src="/images/.webp?v=2" 
-                                alt="Casa Grand Palace Master Blueprint Plan Layout" 
+                                src="/images/image71.png?v=2" alt="Casa Grand Palace Master Blueprint Plan Layout" 
                                 className="w-full h-auto object-cover rounded-2xl"
                             />
                         </div>
@@ -196,8 +194,7 @@ const About = () => {
                         {/* Slide 14: Sai Divine & Cosmo Club Layout Collage */}
                         <div className="rounded-3xl overflow-hidden shadow-2xl border border-gray-100 bg-white p-2">
                             <img 
-                                src="/images/.webp?v=2" 
-                                alt="Sai Divine Temple & Cosmo Club Landscape Layout Plan" 
+                                src="/images/image72.png?v=2" alt="Sai Divine Temple & Cosmo Club Landscape Layout Plan" 
                                 className="w-full h-auto object-cover rounded-2xl"
                             />
                         </div>

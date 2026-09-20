@@ -70,7 +70,7 @@ const AboutUs = () => {
                             viewport={{ once: true }}
                         >
                             <img
-                                src="/images/.webp"
+                                src="/images/image3.png"
                                 alt="Modern Architecture - Morais City"
                                 className="w-full h-full object-cover  transition-all duration-700 rounded-lg shadow-lg"
                             />

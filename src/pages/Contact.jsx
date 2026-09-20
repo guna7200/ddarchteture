@@ -16,7 +16,7 @@ const Contact = () => {
 
     return (
         <PageTransition>
-            <PageHeader title="Contact Us" image="/images/.webp?v=2" />
+            <PageHeader title="Contact Us" image="/images/image91.png" />
 
             <section className="py-24 bg-white border-t border-gray-100 overflow-hidden">
                 <div className="container mx-auto px-6">
@@ -161,7 +161,7 @@ const Contact = () => {
                             {/* Visual blueprint plan card */}
                             <div className="rounded-3xl overflow-hidden shadow-xl border border-gray-100 bg-white p-2">
                                 <img 
-                                    src="/images/.webp" 
+                                    src="/images/image91.png" 
                                     alt="Archi Dee Signs Master Landscape Design Plan" 
                                     className="w-full h-auto object-cover rounded-2xl"
                                 />
@@ -172,7 +172,7 @@ const Contact = () => {
                                 <div className="flex items-center gap-6 mb-6 border-b border-gray-200/55 pb-4">
                                     <div className="w-20 h-20 shrink-0 bg-white p-2 rounded-2xl border border-gray-100 flex items-center justify-center shadow-md">
                                         <img 
-                                            src="/images/.webp?v=2" 
+                                            src="/images/image91.png" 
                                             alt="DD+ Architects Logo" 
                                             className="max-h-full max-w-full object-contain"
                                         />
