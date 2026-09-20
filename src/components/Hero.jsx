@@ -98,7 +98,7 @@ const Hero = () => {
                     className="text-white text-xl md:text-2xl max-w-4xl leading-relaxed font-bold mb-12 drop-shadow-xl"
                 >
                     Architecture | Interior Design | Landscape | PMC<br />
-                    <span className="text-[#C8A97E] font-medium text-lg md:text-xl">Led by Ar. Deepu D Lakshmi (Principal Architect / Founder)</span>
+                    <span className="text-white font-semibold text-xl md:text-2xl lg:text-3xl tracking-wide drop-shadow-md">Led by Ar. Deepu D Lakshmi (Principal Architect / Founder)</span>
                 </motion.p>
 
                 {/* CTAs */}
