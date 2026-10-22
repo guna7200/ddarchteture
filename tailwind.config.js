@@ -7,15 +7,21 @@ export default {
     theme: {
         extend: {
             colors: {
-                'royal-gold': '#C8A97E',
-                'deep-black': '#FFFFFF',
-                'rich-charcoal': '#F5F5F0',
-                'off-white': '#1A1A1A',
-                'navy-blue': '#0F172A',
+                'royal-gold': '#fc7507',
+                'stone-light': '#F0EEE8',
+                'charcoal-dark': '#24231F',
+                'deep-dark': '#181816',
+                'taupe-footer': '#D7D1C4',
+                'accent-lime': '#D7DF7B',
+                'muted-gray': '#77736A',
+                'muted-body': '#68645B',
+                'muted-dark': '#AAA69C',
             },
             fontFamily: {
-                serif: ['"Playfair Display"', 'serif'],
-                sans: ['"Space Grotesk"', 'sans-serif'],
+                italiana: ['"Italiana"', 'serif'],
+                dmsans: ['"DM Sans"', 'sans-serif'],
+                serif: ['"Italiana"', '"Playfair Display"', 'serif'],
+                sans: ['"DM Sans"', '"Space Grotesk"', 'sans-serif'],
             },
             animation: {
                 'marquee': 'marquee 20s linear infinite',

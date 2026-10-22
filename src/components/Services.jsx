@@ -1,189 +1,181 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Check } from 'lucide-react';
+import React, { useRef, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
-const servicesData = [
+const expertiseList = [
     {
         number: '01',
         title: 'Architecture',
-        description: 'Comprehensive architectural solutions from concept development to construction documentation.',
-        scope: [
-            'Master Planning',
-            'Residential Design',
-            'Commercial Design',
-            'Hospitality & Resort Design',
-            'Institutional Projects',
-            'Industrial Facilities',
-            'Construction Documentation'
-        ],
-        image: "/images/landing_architecture.png"
+        subtitle: 'Residential · Commercial · Hospitality',
+        video: '/design_videos/Services-Architecture.mp4',
+        poster: '/images/landing_architecture.png',
+        link: '/services'
     },
     {
         number: '02',
-        title: 'Interior Design',
-        description: 'Thoughtfully crafted interiors that elevate user experiences and reinforce brand or lifestyle aspirations.',
-        scope: [
-            'Residential Interiors',
-            'Corporate Offices',
-            'Hospitality Interiors',
-            'Retail Spaces',
-            'Space Planning',
-            'Furniture & Material Selection',
-            'Turnkey Interior Solutions'
-        ],
-        image: "/images/landing_interior.jpg"
+        title: 'Interior',
+        subtitle: 'Spatial Design · Styling · Lifestyle',
+        video: encodeURI('/design_videos/Services-Interior Design.mp4'),
+        poster: '/images/landing_interior.jpg',
+        link: '/services'
     },
     {
         number: '03',
-        title: 'Project Management Consultancy (PMC)',
-        description: 'Professional project management services ensuring quality, cost control, and timely delivery.',
-        scope: [
-            'Project Planning',
-            'Budget Management',
-            'Vendor Coordination',
-            'Quality Control',
-            'Site Supervision',
-            'Progress Monitoring'
-        ],
-        image: "/images/landing_pmc.jpg"
+        title: 'Landscape',
+        subtitle: 'Softscape · Hardscape · Aquascape',
+        video: encodeURI('/design_videos/Service-Landscape Desing.mp4'),
+        poster: '/images/landing_landscape.jpg',
+        link: '/services'
     },
     {
         number: '04',
-        title: 'Landscape Design',
-        description: 'Creating outdoor environments that connect people with nature.',
-        scope: [
-            'Resort Landscapes',
-            'Residential Gardens',
-            'Public Spaces',
-            'Hardscape Design',
-            'Aquascape',
-            'Planting Design',
-            'Site Development'
-        ],
-        image: "/images/landing_landscape.jpg"
+        title: 'PMC',
+        subtitle: 'Strategy · Coordination · Delivery',
+        video: '/design_videos/Services-PMC.mp4',
+        poster: '/images/landing_pmc.jpg',
+        link: '/services'
     }
 ];
 
-const Services = () => {
-    const [activeIndex, setActiveIndex] = useState(0);
+const VideoCard = ({ item }) => {
+    const videoRef = useRef(null);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
+
+        // Ensure playback starts reliably
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(() => {
+                // Autoplay may be restricted until user interacts, or waiting for buffer
+            });
+        }
+    }, []);
 
     return (
-        <section className="py-28 bg-[#FDFDFD] border-t border-gray-100 relative overflow-hidden">
-            {/* Subtle architectural grid lines for rich texture */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+        <div className="relative w-full h-full overflow-hidden">
+            {/* Auto-playing Video */}
+            <video
+                ref={videoRef}
+                src={item.video}
+                poster={item.poster}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            />
 
-            <div className="container mx-auto px-6 relative z-10">
-                
-                {/* Header */}
-                <div className="max-w-3xl mb-20">
-                    <span className="text-[#C8A97E] uppercase tracking-[0.25em] text-xs font-bold block mb-4 font-sans">
-                        Our Capabilities
+            {/* Dark Gradient Overlay for readability and cinematic atmosphere */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/85 transition-opacity duration-300 group-hover:to-black/90 pointer-events-none" />
+        </div>
+    );
+};
+
+const Services = () => {
+    return (
+        <section id="services" className="relative w-full bg-[#F0EEE8] py-24 sm:py-32 lg:py-36 px-0 overflow-hidden">
+            {/* ── Top Header Area ── */}
+            <div className="max-w-[1400px] mx-auto px-6 sm:px-12 lg:px-20 mb-16 sm:mb-20">
+                {/* Section Label */}
+                <div className="flex items-center gap-4 mb-16">
+                    <span className="font-['DM_Sans'] text-[10px] tracking-[2px] uppercase text-[#77736A] font-normal">
+                        03
                     </span>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 leading-tight">
-                        Facilities That Shape The Future
-                    </h2>
+                    <span className="font-['DM_Sans'] text-[10px] tracking-[2px] uppercase text-[#24231F] font-normal">
+                        Expertise
+                    </span>
+                    <span className="w-12 h-[1px] bg-[#24231F]/50 inline-block ml-1" />
                 </div>
 
-                <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-stretch">
-                    
-                    {/* Left Column: Interactive Service Selector */}
-                    <div className="lg:w-5/12 flex flex-col justify-center space-y-4">
-                        {servicesData.map((service, index) => {
-                            const isActive = activeIndex === index;
-                            return (
-                                <button
-                                    key={index}
-                                    onClick={() => setActiveIndex(index)}
-                                    onMouseEnter={() => setActiveIndex(index)}
-                                    className={`w-full text-left p-4 sm:p-6 md:p-8 rounded-xl border transition-all duration-500 flex items-center justify-between group ${
-                                        isActive 
-                                            ? 'bg-white border-[#C8A97E] shadow-xl sm:translate-x-2' 
-                                            : 'bg-transparent border-gray-100 hover:border-gray-300'
-                                    }`}
-                                >
-                                    <div className="flex items-center gap-4 sm:gap-6">
-                                        <span className={`text-xs sm:text-sm font-sans tracking-wider font-bold transition-colors duration-300 ${
-                                            isActive ? 'text-[#C8A97E]' : 'text-gray-400'
-                                        }`}>
-                                            {service.number}
-                                        </span>
-                                        <h3 className={`text-base sm:text-lg md:text-xl font-serif font-bold transition-colors duration-300 ${
-                                            isActive ? 'text-gray-900' : 'text-gray-600'
-                                        }`}>
-                                            {service.title}
-                                        </h3>
-                                    </div>
-                                    <div className={`p-1.5 sm:p-2 rounded-full transition-all duration-300 shrink-0 ${
-                                        isActive ? 'bg-[#C8A97E] text-white' : 'bg-gray-50 text-gray-400 group-hover:translate-x-1 group-hover:text-gray-600'
-                                    }`}>
-                                        <ArrowRight size={16} />
-                                    </div>
-                                </button>
-                            );
-                        })}
-                    </div>
+                {/* Heading + Right Paragraph */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-end">
+                    <motion.div
+                        className="lg:col-span-8"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                    >
+                        <h2 className="text-[36px] sm:text-[48px] md:text-[56px] lg:text-[62px] leading-[1.05] tracking-[-0.035em] text-[#24231F] font-['DM_Sans'] font-light">
+                            From first line<br />
+                            to final{' '}
+                            <span className="font-['Italiana'] italic font-normal text-[#24231F]">
+                                detail.
+                            </span>
+                        </h2>
+                    </motion.div>
 
-                    {/* Right Column: Display Showcase Card with Animations */}
-                    <div className="lg:w-7/12 flex">
-                        <AnimatePresence mode="wait">
-                            <motion.div
-                                key={activeIndex}
-                                initial={{ opacity: 0, x: 20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                exit={{ opacity: 0, x: -20 }}
-                                transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
-                                className="w-full flex flex-col bg-white rounded-2xl border border-gray-100 shadow-2xl overflow-hidden"
+                    <motion.div
+                        className="lg:col-span-4 pb-2"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+                    >
+                        <p className="font-['DM_Sans'] font-light text-[13px] sm:text-[14px] leading-[22px] text-[#68645B] max-w-sm">
+                            An integrated practice brings clarity to complex projects with consistency to every scale.
+                        </p>
+                    </motion.div>
+                </div>
+            </div>
+
+            {/* ── 4 Tall Vertical Video Cards Grid (Flush layout matching Figma) ── */}
+            <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+                    {expertiseList.map((item, index) => (
+                        <motion.div
+                            key={item.number}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                        >
+                            <Link
+                                to={item.link}
+                                className="group relative block h-[480px] sm:h-[540px] lg:h-[580px] w-full overflow-hidden bg-[#181816] rounded-sm select-none"
                             >
-                                {/* Showcase Image Container */}
-                                <div className="h-48 sm:h-64 md:h-80 overflow-hidden relative">
-                                    <img
-                                        src={servicesData[activeIndex].image}
-                                        alt={servicesData[activeIndex].title}
-                                        className="w-full h-full object-cover"
-                                    />
-                                    {/* Overlay label */}
-                                    <div className="absolute top-6 left-6 bg-[#C8A97E] text-white px-4 py-2 rounded-md shadow text-xs uppercase tracking-widest font-bold font-sans">
-                                        {servicesData[activeIndex].title}
+                                {/* Autoplaying Video Element */}
+                                <VideoCard item={item} />
+
+                                {/* Card Header (Top Bar): Number + Arrow Button */}
+                                <div className="absolute top-0 left-0 right-0 p-7 sm:p-8 flex items-center justify-between z-10">
+                                    <span className="font-['DM_Sans'] text-[11px] text-white/90 font-medium tracking-widest drop-shadow-md">
+                                        {item.number}
+                                    </span>
+
+                                    {/* Circular Arrow Button (48px) */}
+                                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border border-white/55 backdrop-blur-[2px] flex items-center justify-center transition-all duration-300 group-hover:border-white group-hover:bg-white group-hover:text-black text-white shadow-lg">
+                                        <svg
+                                            className="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="1.5"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        >
+                                            <line x1="7" y1="17" x2="17" y2="7" />
+                                            <polyline points="7 7 17 7 17 17" />
+                                        </svg>
                                     </div>
                                 </div>
 
-                                {/* Content Details */}
-                                <div className="p-8 md:p-10 flex-1 flex flex-col justify-between">
-                                    <div className="mb-8">
-                                        <p className="text-gray-900 text-base md:text-lg leading-relaxed mb-8 font-serif font-normal">
-                                            {servicesData[activeIndex].description}
-                                        </p>
-
-                                        {/* Scope Section */}
-                                        <div>
-                                            <span className="text-xs uppercase tracking-widest text-[#C8A97E] font-bold block mb-4 font-sans">
-                                                Scope of Services
-                                            </span>
-                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                {servicesData[activeIndex].scope.map((item, i) => (
-                                                    <motion.div
-                                                        key={i}
-                                                        initial={{ opacity: 0, y: 10 }}
-                                                        animate={{ opacity: 1, y: 0 }}
-                                                        transition={{ delay: i * 0.05 }}
-                                                        className="flex items-center gap-3 text-sm text-gray-900 font-normal"
-                                                    >
-                                                        <div className="p-1 rounded bg-gray-50 border border-gray-100 text-[#C8A97E]">
-                                                            <Check size={12} className="stroke-[3]" />
-                                                        </div>
-                                                        <span>{item}</span>
-                                                    </motion.div>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </div>
+                                {/* Card Footer: Title & Subtitle */}
+                                <div className="absolute bottom-0 left-0 right-0 p-7 sm:p-8 z-10">
+                                    <h3 className="font-['Italiana'] text-[30px] sm:text-[34px] text-white font-normal leading-tight mb-2 transition-transform duration-300 group-hover:-translate-y-1 drop-shadow-md">
+                                        {item.title}
+                                    </h3>
+                                    <p className="font-['DM_Sans'] text-[9.5px] sm:text-[10px] tracking-[1.2px] uppercase text-white/80 font-normal leading-relaxed drop-shadow-sm">
+                                        {item.subtitle}
+                                    </p>
                                 </div>
-                            </motion.div>
-                        </AnimatePresence>
-                    </div>
-
+                            </Link>
+                        </motion.div>
+                    ))}
                 </div>
-
             </div>
         </section>
     );

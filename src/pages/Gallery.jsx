@@ -26,8 +26,8 @@ const Gallery = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        <span className="text-[#C8A97E] uppercase tracking-[0.4em] text-sm font-medium block mb-4">Our Work</span>
-                        <h2 className="text-4xl md:text-5xl font-serif text-gray-900">Project <span className="text-[#C8A97E]">Gallery</span></h2>
+                        <span className="text-[#fc7507] uppercase tracking-[0.4em] text-sm font-medium block mb-4">Our Work</span>
+                        <h2 className="text-4xl md:text-5xl font-serif text-gray-900">Project <span className="text-[#fc7507]">Gallery</span></h2>
                     </motion.div>
 
                     <motion.div

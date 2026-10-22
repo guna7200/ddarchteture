@@ -35,7 +35,7 @@ const Clients = () => {
                 
                 {/* Full Width Header */}
                 <div className="max-w-3xl mb-16">
-                    <span className="text-[#C8A97E] uppercase tracking-[0.2em] text-xs font-semibold block mb-2 font-sans">
+                    <span className="text-[#fc7507] uppercase tracking-[0.2em] text-xs font-semibold block mb-2 font-sans">
                         Our Network
                     </span>
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900">

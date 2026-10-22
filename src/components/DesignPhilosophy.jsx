@@ -15,7 +15,7 @@ const DesignPhilosophy = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <span className="text-[#C8A97E] uppercase tracking-[0.2em] text-sm font-semibold block mb-2 font-sans">
+                            <span className="text-[#fc7507] uppercase tracking-[0.2em] text-sm font-semibold block mb-2 font-sans">
                                 Design Driven
                             </span>
                             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6">
@@ -32,19 +32,19 @@ const DesignPhilosophy = () => {
                                 </h3>
                                 <div className="space-y-8">
                                     <div>
-                                        <h4 className="text-[#C8A97E] font-bold text-base uppercase tracking-wider mb-2 font-sans">Innovation</h4>
+                                        <h4 className="text-[#fc7507] font-bold text-base uppercase tracking-wider mb-2 font-sans">Innovation</h4>
                                         <p className="text-gray-900 text-base font-normal leading-relaxed">Creating distinctive and future-ready solutions.</p>
                                     </div>
                                     <div>
-                                        <h4 className="text-[#C8A97E] font-bold text-base uppercase tracking-wider mb-2 font-sans">Sustainability</h4>
+                                        <h4 className="text-[#fc7507] font-bold text-base uppercase tracking-wider mb-2 font-sans">Sustainability</h4>
                                         <p className="text-gray-900 text-base font-normal leading-relaxed">Designing environmentally responsible spaces that endure.</p>
                                     </div>
                                     <div>
-                                        <h4 className="text-[#C8A97E] font-bold text-base uppercase tracking-wider mb-2 font-sans">Functionality</h4>
+                                        <h4 className="text-[#fc7507] font-bold text-base uppercase tracking-wider mb-2 font-sans">Functionality</h4>
                                         <p className="text-gray-900 text-base font-normal leading-relaxed">Ensuring every space performs efficiently and effectively.</p>
                                     </div>
                                     <div>
-                                        <h4 className="text-[#C8A97E] font-bold text-base uppercase tracking-wider mb-2 font-sans">Excellence</h4>
+                                        <h4 className="text-[#fc7507] font-bold text-base uppercase tracking-wider mb-2 font-sans">Excellence</h4>
                                         <p className="text-gray-900 text-base font-normal leading-relaxed">Delivering quality through meticulous planning and execution.</p>
                                     </div>
                                 </div>

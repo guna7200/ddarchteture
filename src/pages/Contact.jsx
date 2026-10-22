@@ -27,7 +27,7 @@ const Contact = () => {
                         {/* Left Side Address selection panels */}
                         <div className="lg:w-5/12 w-full flex flex-col justify-between space-y-6">
                             <div>
-                                <span className="text-[#C8A97E] uppercase tracking-[0.2em] text-xs font-semibold block mb-2 font-sans">
+                                <span className="text-[#fc7507] uppercase tracking-[0.2em] text-xs font-semibold block mb-2 font-sans">
                                     Our Offices
                                 </span>
                                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-8">
@@ -42,12 +42,12 @@ const Contact = () => {
                                     onClick={() => setSelectedMap('chennai')}
                                     className={`p-6 rounded-2xl border transition-all duration-300 cursor-pointer flex gap-4 items-start ${
                                         selectedMap === 'chennai' 
-                                            ? 'border-[#C8A97E] bg-amber-50/20 shadow-lg shadow-amber-500/5' 
+                                            ? 'border-[#fc7507] bg-amber-50/20 shadow-lg shadow-amber-500/5' 
                                             : 'border-gray-100 hover:border-gray-300 bg-white'
                                     }`}
                                 >
                                     <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-colors duration-300 ${
-                                        selectedMap === 'chennai' ? 'bg-[#C8A97E] text-white' : 'bg-gray-50 text-gray-500'
+                                        selectedMap === 'chennai' ? 'bg-[#fc7507] text-white' : 'bg-gray-50 text-gray-500'
                                     }`}>
                                         <Building size={18} />
                                     </div>
@@ -69,12 +69,12 @@ const Contact = () => {
                                     onClick={() => setSelectedMap('trichy')}
                                     className={`p-6 rounded-2xl border transition-all duration-300 cursor-pointer flex gap-4 items-start ${
                                         selectedMap === 'trichy' 
-                                            ? 'border-[#C8A97E] bg-amber-50/20 shadow-lg shadow-amber-500/5' 
+                                            ? 'border-[#fc7507] bg-amber-50/20 shadow-lg shadow-amber-500/5' 
                                             : 'border-gray-100 hover:border-gray-300 bg-white'
                                     }`}
                                 >
                                     <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-colors duration-300 ${
-                                        selectedMap === 'trichy' ? 'bg-[#C8A97E] text-white' : 'bg-gray-50 text-gray-500'
+                                        selectedMap === 'trichy' ? 'bg-[#fc7507] text-white' : 'bg-gray-50 text-gray-500'
                                     }`}>
                                         <Building size={18} />
                                     </div>
@@ -124,29 +124,29 @@ const Contact = () => {
                                         <input 
                                             type="text" 
                                             placeholder="Your Name" 
-                                            className="w-full bg-white border border-gray-200 p-4 text-xs font-sans text-gray-900 placeholder-gray-400 focus:border-[#C8A97E] outline-none transition-colors rounded-xl shadow-sm" 
+                                            className="w-full bg-white border border-gray-200 p-4 text-xs font-sans text-gray-900 placeholder-gray-400 focus:border-[#fc7507] outline-none transition-colors rounded-xl shadow-sm" 
                                         />
                                         <input 
                                             type="email" 
                                             placeholder="Your Email" 
-                                            className="w-full bg-white border border-gray-200 p-4 text-xs font-sans text-gray-900 placeholder-gray-400 focus:border-[#C8A97E] outline-none transition-colors rounded-xl shadow-sm" 
+                                            className="w-full bg-white border border-gray-200 p-4 text-xs font-sans text-gray-900 placeholder-gray-400 focus:border-[#fc7507] outline-none transition-colors rounded-xl shadow-sm" 
                                         />
                                     </div>
                                     <input 
                                         type="text" 
                                         placeholder="Subject" 
-                                        className="w-full bg-white border border-gray-200 p-4 text-xs font-sans text-gray-900 placeholder-gray-400 focus:border-[#C8A97E] outline-none transition-colors rounded-xl shadow-sm" 
+                                        className="w-full bg-white border border-gray-200 p-4 text-xs font-sans text-gray-900 placeholder-gray-400 focus:border-[#fc7507] outline-none transition-colors rounded-xl shadow-sm" 
                                     />
                                     <textarea 
                                         rows="5" 
                                         placeholder="Your Message" 
-                                        className="w-full bg-white border border-gray-200 p-4 text-xs font-sans text-gray-900 placeholder-gray-400 focus:border-[#C8A97E] outline-none transition-colors rounded-xl shadow-sm"
+                                        className="w-full bg-white border border-gray-200 p-4 text-xs font-sans text-gray-900 placeholder-gray-400 focus:border-[#fc7507] outline-none transition-colors rounded-xl shadow-sm"
                                     ></textarea>
 
                                     <div>
                                         <button 
                                             type="submit" 
-                                            className="inline-flex items-center gap-2 px-10 py-4 bg-[#C8A97E] text-white font-bold uppercase tracking-widest text-xs hover:bg-gray-900 transition-colors duration-300 rounded-xl shadow-md"
+                                            className="inline-flex items-center gap-2 px-10 py-4 bg-[#fc7507] text-white font-bold uppercase tracking-widest text-xs hover:bg-gray-900 transition-colors duration-300 rounded-xl shadow-md"
                                         >
                                             <span>Send Message</span>
                                             <Send size={14} />
@@ -181,7 +181,7 @@ const Contact = () => {
                                         <h2 className="text-sm font-serif font-bold text-gray-900 leading-snug">
                                             ARCHI DEE SIGNS
                                         </h2>
-                                        <p className="text-[#C8A97E] text-[8px] font-bold uppercase tracking-wider font-sans">
+                                        <p className="text-[#fc7507] text-[8px] font-bold uppercase tracking-wider font-sans">
                                             Architecture | Interior | Landscape | PMC
                                         </p>
                                     </div>
@@ -189,7 +189,7 @@ const Contact = () => {
 
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                     <div className="flex items-start gap-3">
-                                        <div className="w-8 h-8 rounded-lg bg-white border border-gray-100 flex items-center justify-center text-[#C8A97E] shrink-0 shadow-sm">
+                                        <div className="w-8 h-8 rounded-lg bg-white border border-gray-100 flex items-center justify-center text-[#fc7507] shrink-0 shadow-sm">
                                             <Phone size={14} />
                                         </div>
                                         <div>
@@ -201,7 +201,7 @@ const Contact = () => {
                                     </div>
 
                                     <div className="flex items-start gap-3">
-                                        <div className="w-8 h-8 rounded-lg bg-white border border-gray-100 flex items-center justify-center text-[#C8A97E] shrink-0 shadow-sm">
+                                        <div className="w-8 h-8 rounded-lg bg-white border border-gray-100 flex items-center justify-center text-[#fc7507] shrink-0 shadow-sm">
                                             <Mail size={14} />
                                         </div>
                                         <div>
@@ -213,12 +213,12 @@ const Contact = () => {
                                     </div>
 
                                     <div className="flex items-start gap-3">
-                                        <div className="w-8 h-8 rounded-lg bg-white border border-gray-100 flex items-center justify-center text-[#C8A97E] shrink-0 shadow-sm">
+                                        <div className="w-8 h-8 rounded-lg bg-white border border-gray-100 flex items-center justify-center text-[#fc7507] shrink-0 shadow-sm">
                                             <Globe size={14} />
                                         </div>
                                         <div>
                                             <p className="text-[8px] text-gray-400 uppercase tracking-widest font-bold font-sans">Website</p>
-                                            <p className="text-[11px] font-sans text-[#C8A97E] font-semibold mt-0.5 hover:underline">
+                                            <p className="text-[11px] font-sans text-[#fc7507] font-semibold mt-0.5 hover:underline">
                                                 <a href="https://www.archideesigns.com" target="_blank" rel="noopener noreferrer">
                                                     www.archideesigns.com
                                                 </a>

@@ -49,7 +49,7 @@ const Services = () => {
                     
                     {/* Header */}
                     <div className="text-center mb-24">
-                        <span className="text-[#C8A97E] uppercase tracking-[0.2em] text-xs font-semibold block mb-2 font-sans">
+                        <span className="text-[#fc7507] uppercase tracking-[0.2em] text-xs font-semibold block mb-2 font-sans">
                             Our Expertise
                         </span>
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-gray-900 leading-tight">
@@ -92,11 +92,11 @@ const Services = () => {
                                         viewport={{ once: true }}
                                         transition={{ duration: 0.8 }}
                                     >
-                                        <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-amber-200 to-[#C8A97E]" />
+                                        <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-amber-200 to-[#fc7507]" />
                                         
                                         <div className="space-y-4">
                                             <div className="flex items-center justify-between">
-                                                <span className="font-serif text-3xl font-extrabold text-[#C8A97E]/30 tracking-wider">
+                                                <span className="font-serif text-3xl font-extrabold text-[#fc7507]/30 tracking-wider">
                                                     {srv.num}
                                                 </span>
                                             </div>
@@ -115,7 +115,7 @@ const Services = () => {
                                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                                 {srv.scopes.map((scope, sIdx) => (
                                                     <div key={sIdx} className="flex items-start gap-3">
-                                                        <CheckCircle2 size={16} className="text-[#C8A97E] shrink-0 mt-0.5" />
+                                                        <CheckCircle2 size={16} className="text-[#fc7507] shrink-0 mt-0.5" />
                                                         <span className="text-xs text-gray-700 font-sans leading-tight">
                                                             {scope}
                                                         </span>

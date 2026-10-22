@@ -10,30 +10,8 @@
   }
 
   body {
-    @apply bg-white text-black font-sans antialiased text-[16px] leading-relaxed;
+    @apply bg-[#F0EEE8] text-[#24231F] font-sans antialiased text-[14px] leading-relaxed;
     cursor: none;
-  }
-
-  main :not(.page-header) p:not(.text-white):not(.text-gray-100):not(.text-gray-200):not(.text-gray-300),
-  main :not(.page-header) li:not(.text-white):not(.text-gray-300),
-  main :not(.page-header) :not(.marquee-track) span:not(.text-white):not(.text-gray-300):not(.text-amber-800):not(.text-royal-gold) {
-    font-size: 16px !important;
-    font-weight: 400 !important;
-    /* color: #000000 !important; */
-  }
-
-  main :not(.page-header) h1:not(.text-white),
-  main :not(.page-header) h2:not(.text-white),
-  main :not(.page-header) h3:not(.text-white) {
-    @apply font-serif text-black;
-  }
-
-  main :not(.page-header) h4:not(.text-white),
-  main :not(.page-header) h5:not(.text-white),
-  main :not(.page-header) h6:not(.text-white) {
-    @apply font-serif text-black;
-    font-size: 18px !important;
-    font-weight: 600 !important;
   }
 
   /* Custom scrollbar */
@@ -46,14 +24,14 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #C8A97E;
+    background: #fc7507;
     border-radius: 2px;
   }
 }
 
 @layer utilities {
   .text-gradient-gold {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#C8A97E] to-[#a07850];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#fc7507] to-[#a07850];
   }
 
   .perspective-card {
@@ -67,7 +45,7 @@
   position: fixed;
   width: 28px;
   height: 28px;
-  border: 1.5px solid #C8A97E;
+  border: 1.5px solid #fc7507;
   background: rgba(200, 169, 126, 0.12);
   border-radius: 50%;
   pointer-events: none;
@@ -80,7 +58,7 @@
   width: 50px;
   height: 50px;
   background: rgba(200, 169, 126, 0.25);
-  border-color: #C8A97E;
+  border-color: #fc7507;
 }
 
 /* Marquee */
@@ -110,7 +88,7 @@
 .section-line {
   width: 60px;
   height: 1px;
-  background: #C8A97E;
+  background: #fc7507;
   display: inline-block;
   vertical-align: middle;
   margin-right: 16px;

@@ -35,7 +35,7 @@ const Team = () => {
                 
                 {/* Header */}
                 <div className="max-w-3xl mb-20">
-                    <span className="text-[#C8A97E] uppercase tracking-[0.2em] text-xs font-semibold block mb-2 font-sans">
+                    <span className="text-[#fc7507] uppercase tracking-[0.2em] text-xs font-semibold block mb-2 font-sans">
                         Our Experts
                     </span>
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900">
@@ -71,10 +71,10 @@ const Team = () => {
                                     <h4 className="text-xl font-serif font-bold text-gray-900 leading-snug">
                                         {founder.name}
                                     </h4>
-                                    <p className="text-[#C8A97E] text-xs uppercase tracking-wider font-semibold font-sans">
+                                    <p className="text-[#fc7507] text-xs uppercase tracking-wider font-semibold font-sans">
                                         {founder.role}
                                     </p>
-                                    <span className="text-[10px] text-[#C8A97E] font-bold tracking-widest block font-sans">
+                                    <span className="text-[10px] text-[#fc7507] font-bold tracking-widest block font-sans">
                                         {founder.firm}
                                     </span>
                                 </div>

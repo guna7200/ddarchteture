@@ -90,7 +90,7 @@ const PrestigiousProjectsList = () => {
                 
                 {/* Section Header */}
                 <div className="max-w-3xl mb-16">
-                    <span className="text-[#C8A97E] uppercase tracking-[0.2em] text-xs font-semibold block mb-2 font-sans">
+                    <span className="text-[#fc7507] uppercase tracking-[0.2em] text-xs font-semibold block mb-2 font-sans">
                         Our Landmark Achievements
                     </span>
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900">
@@ -126,17 +126,17 @@ const PrestigiousProjectsList = () => {
                         {projectsData.map((project, index) => (
                             <motion.div
                                 key={index}
-                                className="p-6 bg-white rounded-xl border border-gray-100 hover:border-[#C8A97E] hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row md:items-center justify-between gap-6 group"
+                                className="p-6 bg-white rounded-xl border border-gray-100 hover:border-[#fc7507] hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row md:items-center justify-between gap-6 group"
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: Math.min(index * 0.05, 0.3) }}
                             >
                                 <div className="space-y-2">
-                                    <span className="text-xs font-bold text-[#C8A97E] uppercase tracking-wider block font-sans">
+                                    <span className="text-xs font-bold text-[#fc7507] uppercase tracking-wider block font-sans">
                                         {project.client}
                                     </span>
-                                    <h3 className="text-lg font-serif font-bold text-gray-900 leading-snug group-hover:text-[#C8A97E] transition-colors duration-300">
+                                    <h3 className="text-lg font-serif font-bold text-gray-900 leading-snug group-hover:text-[#fc7507] transition-colors duration-300">
                                         {project.project}
                                     </h3>
                                     <div className="flex flex-wrap items-center gap-4 text-xs text-gray-500 font-sans mt-2">
@@ -149,8 +149,8 @@ const PrestigiousProjectsList = () => {
 
                                 {/* Project Value Badge */}
                                 <div className="flex items-center gap-2 self-start md:self-center shrink-0">
-                                    <div className="px-3.5 py-1.5 bg-[#F9F9FB] border border-gray-100 rounded-full flex items-center gap-1.5 text-xs font-bold text-gray-900 font-sans group-hover:bg-[#C8A97E]/10 group-hover:border-[#C8A97E]/20 transition-all duration-300">
-                                        <Award size={13} className="text-[#C8A97E]" />
+                                    <div className="px-3.5 py-1.5 bg-[#F9F9FB] border border-gray-100 rounded-full flex items-center gap-1.5 text-xs font-bold text-gray-900 font-sans group-hover:bg-[#fc7507]/10 group-hover:border-[#fc7507]/20 transition-all duration-300">
+                                        <Award size={13} className="text-[#fc7507]" />
                                         <span>Valuation: {project.value}</span>
                                     </div>
                                 </div>

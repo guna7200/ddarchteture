@@ -52,7 +52,7 @@ const Portfolio = () => {
                                     onClick={() => setActiveCategory(category)}
                                     className={`text-sm uppercase tracking-widest transition-colors duration-300 pb-1 border-b-2 ${activeCategory === category
                                         ? 'text-royal-gold border-royal-gold'
-                                        : 'text-gray-500 border-transparent hover:text-[#C8A97E]'
+                                        : 'text-gray-500 border-transparent hover:text-[#fc7507]'
                                         }`}
                                 >
                                     {category}

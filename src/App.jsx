@@ -9,7 +9,7 @@ import CustomCursor from './components/CustomCursor';
 function App() {
   return (
     <Router>
-      <div className="bg-white min-h-screen text-gray-900 flex flex-col">
+      <div className="bg-[#F0EEE8] min-h-screen text-[#24231F] flex flex-col selection:bg-[#24231F] selection:text-[#F0EEE8]">
         <CustomCursor />
         <ScrollToTop />
         <Navbar />

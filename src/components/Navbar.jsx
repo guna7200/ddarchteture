@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-
-const siteLogo = '/images/DD_Logo.png';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -11,12 +8,16 @@ const Navbar = () => {
     const location = useLocation();
 
     useEffect(() => {
-        const handleScroll = () => setIsScrolled(window.scrollY > 60);
-        window.addEventListener('scroll', handleScroll);
+        const handleScroll = () => {
+            const heroEl = document.getElementById('home');
+            const heroHeight = heroEl ? heroEl.offsetHeight - 120 : window.innerHeight * 3;
+            setIsScrolled(window.scrollY > heroHeight);
+        };
+        handleScroll();
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [location.pathname]);
 
-    // Close mobile menu on route change
     useEffect(() => {
         setIsMobileMenuOpen(false);
     }, [location.pathname]);
@@ -25,117 +26,117 @@ const Navbar = () => {
         { name: 'Home', path: '/' },
         { name: 'About', path: '/about' },
         { name: 'Services', path: '/services' },
-        { name: 'Gallery', path: '/gallery' },
+        { name: 'Projects', path: '/gallery' },
         { name: 'Contact', path: '/contact' },
     ];
 
-    const isActive = (path) => location.pathname === path;
     const isHome = location.pathname === '/';
-
     const isTransparent = isHome && !isScrolled;
 
     return (
-        <>
-            <nav
-                className={`fixed w-full z-50 transition-all duration-500 ${isScrolled || !isHome
-                    ? 'py-2.5 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm'
-                    : 'py-3.5 bg-transparent'
-                    }`}
-            >
-                <div className="mx-auto px-6 md:px-16 lg:px-24 flex justify-between items-center">
-                    {/* Logo */}
-                    <Link to="/" className="flex items-center z-10">
-                        <div className="bg-white p-1.5 px-3 rounded-xl shadow-md border border-gray-100/70 flex items-center justify-center transition-transform hover:scale-105">
-                            <img src={siteLogo} alt="DD+ Architects Logo" className="h-12 sm:h-14 md:h-16 w-auto object-contain" />
-                        </div>
-                    </Link>
+        <header
+            className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+                isTransparent
+                    ? 'py-6 bg-transparent border-b border-white/10'
+                    : 'py-4 bg-[#F0EEE8]/95 backdrop-blur-md border-b border-[#24231F]/10 shadow-sm'
+            }`}
+        >
+            <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-14 flex items-center justify-between">
+                {/* Brand Logo matching Figma: DD+ ARCHITECTS */}
+                <Link to="/" className="flex flex-col items-start group select-none">
+                    <span
+                        className={`font-['DM_Sans'] font-medium text-[20px] leading-[18px] tracking-[4.4px] transition-colors duration-300 ${
+                            isTransparent ? 'text-white' : 'text-[#24231F]'
+                        }`}
+                    >
+                        DD+
+                    </span>
+                    <span
+                        className={`font-['DM_Sans'] font-normal text-[7.5px] leading-[8px] tracking-[2.94px] uppercase mt-1 transition-colors duration-300 ${
+                            isTransparent ? 'text-white/80' : 'text-[#24231F]/80'
+                        }`}
+                    >
+                        Architects
+                    </span>
+                </Link>
 
-                    {/* Desktop nav links */}
-                    <div className="hidden md:flex gap-10 items-center">
-                        {navLinks.map((link) => (
+                {/* Desktop Nav Links matching Figma */}
+                <nav className="hidden md:flex items-center gap-10">
+                    {navLinks.map((link) => {
+                        const isActive = location.pathname === link.path;
+                        return (
                             <Link
                                 key={link.name}
                                 to={link.path}
-                                className={`relative text-sm uppercase tracking-[0.3em] font-medium transition-colors duration-300 py-1 group ${
-                                    isActive(link.path)
-                                        ? 'text-[#C8A97E]'
-                                        : isTransparent
-                                            ? 'text-white hover:text-[#C8A97E]'
-                                            : 'text-gray-700 hover:text-[#C8A97E]'
+                                className={`relative py-1 font-['DM_Sans'] font-normal text-[12px] tracking-[0.96px] transition-colors duration-300 ${
+                                    isActive
+                                        ? isTransparent ? 'text-white' : 'text-[#24231F] font-medium'
+                                        : isTransparent ? 'text-white/70 hover:text-white' : 'text-[#68645B] hover:text-[#24231F]'
                                 }`}
                             >
                                 {link.name}
-                                <span className={`absolute bottom-0 left-0 h-px bg-[#C8A97E] transition-all duration-300 ${isActive(link.path) ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                                {isActive && (
+                                    <motion.span
+                                        layoutId="navbar-indicator"
+                                        className={`absolute bottom-0 left-0 right-0 h-[1px] ${
+                                            isTransparent ? 'bg-white' : 'bg-[#24231F]'
+                                        }`}
+                                    />
+                                )}
                             </Link>
-                        ))}
-                        <Link
-                            to="/contact"
-                            className={`ml-4 px-5 py-2.5 border text-sm uppercase tracking-widest font-medium transition-all duration-300 ${
-                                isTransparent
-                                    ? 'border-white text-white hover:bg-white hover:text-gray-900'
-                                    : 'border-[#C8A97E] text-[#C8A97E] hover:bg-[#C8A97E] hover:text-white'
-                            }`}
-                        >
-                            Hire Us
-                        </Link>
-                    </div>
+                        );
+                    })}
+                </nav>
 
-                    {/* Mobile hamburger */}
-                    <button
-                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className="md:hidden z-[60] w-10 h-10 flex flex-col justify-center gap-1.5 group"
-                        aria-label="Toggle menu"
-                    >
-                        <span className={`h-px transition-all duration-300 ${isTransparent ? 'bg-white' : 'bg-gray-800'} ${isMobileMenuOpen ? 'rotate-45 translate-y-[7px] w-6' : 'w-6'}`} />
-                        <span className={`h-px transition-all duration-300 ${isTransparent ? 'bg-white' : 'bg-gray-800'} ${isMobileMenuOpen ? 'opacity-0 w-4' : 'w-4'}`} />
-                        <span className={`h-px transition-all duration-300 ${isTransparent ? 'bg-white' : 'bg-gray-800'} ${isMobileMenuOpen ? '-rotate-45 -translate-y-[7px] w-6' : 'w-5'}`} />
-                    </button>
-                </div>
-            </nav>
+                {/* Mobile Menu Button */}
+                <button
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    className="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5 focus:outline-none"
+                    aria-label="Toggle Navigation"
+                >
+                    <span
+                        className={`block h-[1px] w-6 transition-all duration-300 ${
+                            isTransparent ? 'bg-white' : 'bg-[#24231F]'
+                        } ${isMobileMenuOpen ? 'rotate-45 translate-y-[7px]' : ''}`}
+                    />
+                    <span
+                        className={`block h-[1px] w-4 transition-all duration-300 ${
+                            isTransparent ? 'bg-white' : 'bg-[#24231F]'
+                        } ${isMobileMenuOpen ? 'opacity-0' : ''}`}
+                    />
+                    <span
+                        className={`block h-[1px] w-6 transition-all duration-300 ${
+                            isTransparent ? 'bg-white' : 'bg-[#24231F]'
+                        } ${isMobileMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''}`}
+                    />
+                </button>
+            </div>
 
-            {/* ── Full-screen mobile menu overlay ── */}
+            {/* Mobile Dropdown */}
             <AnimatePresence>
                 {isMobileMenuOpen && (
                     <motion.div
-                        initial={{ opacity: 0, clipPath: 'circle(0% at calc(100% - 48px) 48px)' }}
-                        animate={{ opacity: 1, clipPath: 'circle(150% at calc(100% - 48px) 48px)' }}
-                        exit={{ opacity: 0, clipPath: 'circle(0% at calc(100% - 48px) 48px)' }}
-                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                        className="fixed inset-0 bg-white z-40 flex flex-col justify-center items-center"
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.2 }}
+                        className="md:hidden bg-[#F0EEE8] border-b border-[#24231F]/15 px-6 py-6 shadow-xl"
                     >
-                        <nav className="flex flex-col gap-2 items-center w-full px-8">
-                            {navLinks.map((link, i) => (
-                                <motion.div
+                        <div className="flex flex-col gap-4">
+                            {navLinks.map((link) => (
+                                <Link
                                     key={link.name}
-                                    initial={{ opacity: 0, y: 30 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: 20 }}
-                                    transition={{ delay: 0.15 + i * 0.08, duration: 0.5 }}
-                                    className="w-full max-w-sm"
+                                    to={link.path}
+                                    className="font-['DM_Sans'] text-sm tracking-widest uppercase text-[#24231F] py-2 border-b border-[#24231F]/5"
                                 >
-                                    <Link
-                                        to={link.path}
-                                        className="group flex items-center justify-between w-full border-b border-gray-200 py-6 text-3xl font-serif font-bold text-gray-900 hover:text-[#C8A97E] transition-colors duration-300"
-                                    >
-                                        <span>{link.name}</span>
-                                        <ArrowUpRight size={20} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    </Link>
-                                </motion.div>
+                                    {link.name}
+                                </Link>
                             ))}
-                        </nav>
-
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 0.5 }}
-                            className="mt-12 text-gray-600 text-sm uppercase tracking-[0.4em]"
-                        >
-                            Archi Dee Signs
-                        </motion.div>
+                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>
-        </>
+        </header>
     );
 };
 

@@ -16,7 +16,7 @@ const About = () => {
                     
                     {/* Header */}
                     <div className="text-center mb-24">
-                        <span className="text-[#C8A97E] uppercase tracking-[0.2em] text-xs font-semibold block mb-2 font-sans">
+                        <span className="text-[#fc7507] uppercase tracking-[0.2em] text-xs font-semibold block mb-2 font-sans">
                             Who We Are
                         </span>
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-gray-900 leading-tight">
@@ -52,8 +52,8 @@ const About = () => {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8 }}
                             >
-                                <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-amber-200 to-[#C8A97E]" />
-                                <div className="w-14 h-14 rounded-2xl bg-amber-50/70 border border-amber-100 flex items-center justify-center text-[#C8A97E] mb-6">
+                                <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-amber-200 to-[#fc7507]" />
+                                <div className="w-14 h-14 rounded-2xl bg-amber-50/70 border border-amber-100 flex items-center justify-center text-[#fc7507] mb-6">
                                     <Eye size={24} />
                                 </div>
                                 <h3 className="text-2xl font-serif font-bold text-gray-900 mb-4">
@@ -90,8 +90,8 @@ const About = () => {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8 }}
                             >
-                                <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-amber-200 to-[#C8A97E]" />
-                                <div className="w-14 h-14 rounded-2xl bg-amber-50/70 border border-amber-100 flex items-center justify-center text-[#C8A97E] mb-6">
+                                <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-amber-200 to-[#fc7507]" />
+                                <div className="w-14 h-14 rounded-2xl bg-amber-50/70 border border-amber-100 flex items-center justify-center text-[#fc7507] mb-6">
                                     <Target size={24} />
                                 </div>
                                 <h3 className="text-2xl font-serif font-bold text-gray-900 mb-4">
@@ -99,15 +99,15 @@ const About = () => {
                                 </h3>
                                 <ul className="text-gray-600 space-y-4 font-sans text-base font-light">
                                     <li className="flex items-start gap-3">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-[#C8A97E] shrink-0 mt-2.5" />
+                                        <span className="w-1.5 h-1.5 rounded-full bg-[#fc7507] shrink-0 mt-2.5" />
                                         <span>Create dynamic design environments combining creativity with functionality.</span>
                                     </li>
                                     <li className="flex items-start gap-3">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-[#C8A97E] shrink-0 mt-2.5" />
+                                        <span className="w-1.5 h-1.5 rounded-full bg-[#fc7507] shrink-0 mt-2.5" />
                                         <span>Maintain integrity and top-notch quality on all levels from brainstorming to realization.</span>
                                     </li>
                                     <li className="flex items-start gap-3">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-[#C8A97E] shrink-0 mt-2.5" />
+                                        <span className="w-1.5 h-1.5 rounded-full bg-[#fc7507] shrink-0 mt-2.5" />
                                         <span>Create dynamic, adaptable, and long-lasting spaces for a better life.</span>
                                     </li>
                                 </ul>
@@ -139,8 +139,8 @@ const About = () => {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8 }}
                             >
-                                <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-amber-200 to-[#C8A97E]" />
-                                <div className="w-14 h-14 rounded-2xl bg-amber-50/70 border border-amber-100 flex items-center justify-center text-[#C8A97E] mb-6">
+                                <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-amber-200 to-[#fc7507]" />
+                                <div className="w-14 h-14 rounded-2xl bg-amber-50/70 border border-amber-100 flex items-center justify-center text-[#fc7507] mb-6">
                                     <Compass size={24} />
                                 </div>
                                 <h3 className="text-2xl font-serif font-bold text-gray-900 mb-4">
@@ -174,7 +174,7 @@ const About = () => {
                 <div className="w-full px-8 md:px-16 lg:px-24 mx-auto">
                     
                     <div className="mb-16">
-                        <span className="text-[#C8A97E] uppercase tracking-[0.2em] text-xs font-semibold block mb-2 font-sans">
+                        <span className="text-[#fc7507] uppercase tracking-[0.2em] text-xs font-semibold block mb-2 font-sans">
                             Landscape Masterpieces
                         </span>
                         <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900">
